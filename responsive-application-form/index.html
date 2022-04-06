@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="shortcut icon" href="img/default.jpg" type="image/x-icon">
+        <title>Application Form</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/responsive.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/air-datepicker/2.2.3/css/datepicker.min.css" />
+    </head>
+    <body>
+        <section>
+            <form action="" method="POST" enctype="multipart/form-data" autocomplete="off">
+
+                <div class="wrapper">
+                    <div class="container">
+                        <h2 class="heading"><i class="fas fa-user-edit"></i> Online Application Form for Scholarship Cum Admission Test</h2>
+                        <h3 class="info"><i class="far fa-hand-point-right"></i> Instruction : All (<span class="required">*</span>) fields are mandatory</h3>
+                        <ul>
+                            <li style="margin-top: 0px;">1. Please fill the complete form correctly.</li>
+                            <li>2. Take a printout after submitting the form.</li>
+                            <li>3. Make a bank draft of Rs. 350/- ( General Male Candidate ) / Rs. 250/- ( ST, SC, OBC & Female Students ) in favor of CIMAGE, Payable at Patna Branch.</li>
+                            <li>4. Send us the printout along with the bank draft at : <b>Catalyst College, Behind S.K. Puri Park, In-front of Bank of Baroda, Boring Road, Patna.</b></li>
+                        </ul>
+                        <div id="error-box">
+                            <p>
+                                <i class="fas fa-exclamation-triangle"></i>
+                                <span id="error-msg"> Please fill all the required fields.</span>
+                            </p>
+                            <div id="close-error">
+                                <i class="fas fa-times"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="wrapper">
+                    <div class="container">
+                        <h3 class="title">Personal details</h3>
+                        <div class="input-container">
+                            <div class="input-group">
+                                <div class="input-box">
+                                    <label for="select-course" class="text">1. Course applied for <span class="required">*</span></label>
+                                </div>
+                                <div class="input-box">
+                                    <select name="select_course" id="select-course">
+                                        <option value="">-- Select a course --</option>
+                                        <optgroup label="Information Technology">
+                                            <option value="BCA">BCA</option>
+                                            <option value="B.Sc IT">B.Sc IT</option>
+                                            <option value="MCA">MCA</option>
+                                        </optgroup>
+                                        <optgroup label="Management">
+                                            <option value="BBA">BBA</option>
+                                            <option value="BBM">BBM</option>
+                                            <option value="B.Com">B.Com</option>
+                                            <option value="MBA">MBA</option>
+                                        </optgroup>
+                                        <optgroup label="Media">
+                                            <option value="BMC">BMC</option>
+                                        </optgroup>
+                                    </select>
+                                    <i class="fas fa-book-reader"></i>
+                                    <span class="right-icon"><i class="fas fa-sort none"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-container">
+                            <div class="input-group">
+                                <div class="input-box">
+                                    <label for="first-name" class="text">2. First name <span class="required">*</span></label>
+                                </div>
+                                <div class="input-box">
+                                    <input type="text" name="first_name" id="first-name" placeholder="Enter first name" required>
+                                    <i class="fas fa-user"></i>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <div class="input-box">
+                                    <label for="middle-name" class="text">3. Middle name</label>
+                                </div>
+                                <div class="input-box">
+                                    <input type="text" name="middle_name" id="middle-name" placeholder="Enter middle name">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <div class="input-box">
+                                    <label for="last-name" class="text">4. Last name <span class="required">*</span></label>
+                                </div>
+                                <div class="input-box">
+                                    <input type="text" name="last_name" id="last-name" placeholder="Enter last name">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-container">
+                            <div class="input-group">
+                                <div class="input-box">
+                                    <label for="full-name" class="text">5. Full Name <span class="required">*</span></label>
+                                </div>
+                                <div class="input-box">
+                                    <input type="text" name="ful_name" id="full-name" placeholder="Your full name" readonly>
+                                    <i class="fas fa-user"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-container">
+                            <div class="input-group">
+                                <div class="input-box">
+                                    <label for="dob" class="text">6. DOB <span class="required">*</span></label>
+                                </div>
+                                <div class="input-box">
+                                    <input type="text" name="dob" id="dob" placeholder="DD / MM / YYYY">
+                                    <i class="fas fas fa-birthday-cake"></i>
+                                    <span class="right-icon"><i class="fas fa-calendar-alt none"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="wrapper">
+                    <div class="container">
+                        <div class="input-container">
+                            <div class="input-group">
+                                <div class="input-box">
+                                    <label class="text">7. Sex <span class="required">*</span></label>
+                                </div>
+                                <div class="input-box">
+                                    <label class="radio-box">Male
+                                        <input type="radio" name="sex" id="sex-male" value="Male" checked>
+                                        <span class="radio-square"></span>
+                                    </label>
+                                    <label class="radio-box">Female
+                                        <input type="radio" name="sex" id="sex-female" value="Female">
+                                        <span class="radio-square"></span>
+                                    </label>
+                                    <label class="radio-box">Transgender
+                                        <input type="radio" name="sex" id="sex-transgender" value="Transgender">
+                                        <span class="radio-square"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <div class="input-box">
+                                    <label class="text">8. Martial status <span class="required">*</span></label>
+                                </div>
+                                <div class="input-box">
+                                    <label class="radio-box">Married
+                                        <input type="radio" name="martial_status" id="martial-status-married" value="Married">
+                                        <span class="radio-square"></span>
+                                    </label>
+                                    <label class="radio-box">Unmarried
+                                        <input type="radio" name="martial_status" id="martial-status-unmarried" value="Unmarried" checked>
+                                        <span class="radio-square"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-container">
+                            <div class="input-group">
+                                <div class="input-box">
+                                    <label class="text">9. Nationality <span class="required">*</span></label>
+                                </div>
+                                <div class="input-box">
+                                    <label class="radio-box">Indian
+                                        <input type="radio" name="nationality" id="nationality-indian" value="Indian" checked>
+                                        <span class="radio-square"></span>
+                                    </label>
+                                    <label class="radio-box">Nepalese
+                                        <input type="radio" name="nationality" id="nationality-nepalese" value="Nepalese">
+                                        <span class="radio-square"></span>
+                                    </label>
+                                    <label class="radio-box">Others
+                                        <input type="radio" name="nationality" id="nationality-others" value="Others">
+                                        <span class="radio-square"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <div class="input-box">
+                                    <label for="nationality-others" class="text">9.1 Others nationality <span class="required">*</span></label>
+                                </div>
+                                <div class="input-box">
+                                    <input type="text" name="nationality_others" id="nationality-others-text" placeholder="Enter nationality">
+                                    <i class="fas fa-flag"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-container">
+                            <div class="input-group">
+                                <div class="input-box">
+                                    <label class="text">10. Category <span class="required">*</span></label>
+                                </div>
+                                <div class="input-box">
+                                    <label class="radio-box">General
+                                        <input type="radio" name="category" id="category-gen" value="General" checked>
+                                        <span class="radio-square"></span>
+                                    </label>
+                                    <label class="radio-box">OBC
+                                        <input type="radio" name="category" id="category-obc" value="OBC">
+                                        <span class="radio-square"></span>
+                                    </label>
+                                    <label class="radio-box">SC
+                                        <input type="radio" name="category" id="category-sc" value="SC">
+                                        <span class="radio-square"></span>
+                                    </label>
+                                    <label class="radio-box">ST
+                                        <input type="radio" name="category" id="category-st" value="ST">
+                                        <span class="radio-square"></span>
+                                    </label>
+                                    <label class="radio-box">Company sponsored
+                                        <input type="radio" name="category" id="category-cs" value="Company sponsored">
+                                        <span class="radio-square"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="input-group" id="obc-layer-box">
+                                <div class="input-box">
+                                    <label class="text">10.1 Incase of OBC indicate the layer <span class="required">*</span></label>
+                                </div>
+                                <div class="input-box">
+                                    <label class="radio-box">Creamy layer
+                                        <input type="radio" name="layer" id="layer-cl" value="Creamy layer">
+                                        <span class="radio-square disabled" id="layer-cl-check"></span>
+                                    </label>
+                                    <label class="radio-box">Non-creamy layer
+                                        <input type="radio" name="layer" id="layer-ncl" value="Non-creamy layer">
+                                        <span class="radio-square disabled" id="layer-ncl-check"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-container">
+                            <div class="input-group">
+                                <div class="input-box">
+                                    <label class="text">11. Whether Minority <span class="required">*</span></label>
+                                </div>
+                                <div class="input-box">
+                                    <label class="radio-box">Yes
+                                        <input type="radio" name="minority" id="minority-yes" value="Yes">
+                                        <span class="radio-square"></span>
+                                    </label>
+                                    <label class="radio-box">No
+                                        <input type="radio" name="minority" id="minority-no" value="No" checked>
+                                        <span class="radio-square"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <div class="input-box">
+                                    <label class="text">12. Territory <span class="required">*</span></label>
+                                </div>
+                                <div class="input-box">
+                                    <label class="radio-box">Urban
+                                        <input type="radio" name="territory" id="territory-urban" value="Urban">
+                                        <span class="radio-square"></span>
+                                    </label>
+                                    <label class="radio-box">Rural
+                                        <input type="radio" name="territory" id="territory-rural" value="Rural" checked>
+                                        <span class="radio-square"></span>
+                                    </label>
+                                    <label class="radio-box">Tribal
+                                        <input type="radio" name="territory" id="territory-tribal" value="Tribal">
+                                        <span class="radio-square"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-container">
+                            <div class="input-group">
+                                <div class="input-box">
+                                    <label class="text">13. Religion <span class="required">*</span></label>
+                                </div>
+                                <div class="input-box">
+                                    <label class="radio-box">Hindu
+                                        <input type="radio" name="religion" id="religion-hindu" value="Hindu" checked>
+                                        <span class="radio-square"></span>
+                                    </label>
+                                    <label class="radio-box">Muslim
+                                        <input type="radio" name="religion" id="religion-muslim" value="Muslim">
+                                        <span class="radio-square"></span>
+                                    </label>
+                                    <label class="radio-box">Sikh
+                                        <input type="radio" name="religion" id="religion-sikh" value="Sikh">
+                                        <span class="radio-square"></span>
+                                    </label>
+                                    <label class="radio-box">Christian
+                                        <input type="radio" name="religion" id="religion-christian" value="Christian">
+                                        <span class="radio-square"></span>
+                                    </label>
+                                    <label class="radio-box">Buddhist
+                                        <input type="radio" name="religion" id="religion-buddhist" value="Buddhist">
+                                        <span class="radio-square"></span>
+                                    </label>
+                                    <label class="radio-box">Jain
+                                        <input type="radio" name="religion" id="religion-jain" value="Jain">
+                                        <span class="radio-square"></span>
+                                    </label>
+                                    <label class="radio-box">Others
+                                        <input type="radio" name="religion" id="religion-others" value="Others">
+                                        <span class="radio-square"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <div class="input-box">
+                                    <label for="religion-others" class="text">13.1 Others religion <span class="required">*</span></label>
+                                </div>
+                                <div class="input-box">
+                                    <input type="text" name="religion_others" id="religion-others-text" placeholder="Enter your religion">
+                                    <i class="fas fa-om"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-container">
+                            <div class="input-group">
+                                <div class="input-box">
+                                    <label class="text">14. Employment status <span class="required">*</span></label>
+                                </div>
+                                <div class="input-box">
+                                    <label class="radio-box">Employed
+                                        <input type="radio" name="employment_status" id="employment-status-emp" value="Employed" checked>
+                                        <span class="radio-square"></span>
+                                    </label>
+                                    <label class="radio-box">Unemployed
+                                        <input type="radio" name="employment_status" id="employment-status-unemp" value="Unemployed">
+                                        <span class="radio-square"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <div class="input-box">
+                                    <label class="text">15. Whether a person with disability <span class="required">*</span></label>
+                                </div>
+                                <div class="input-box">
+                                    <label class="radio-box">Yes
+                                        <input type="radio" name="disability" id="disability-yes" value="Yes">
+                                        <span class="radio-square"></span>
+                                    </label>
+                                    <label class="radio-box">No
+                                        <input type="radio" name="disability" id="disability-no" value="No" checked>
+                                        <span class="radio-square"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-container">
+                            <div class="input-group">
+                                <div class="input-box">
+                                    <label class="text">15.1 Types of disability <span class="required">*</span></label>
+                                </div>
+                                <div class="input-box">
+                                    <label class="radio-box">Hearing
+                                        <input type="radio" name="disability_type" id="disability-hearing" value="Hearing">
+                                        <span class="radio-square disabled" id="disability-hearing-check"></span>
+                                    </label>
+                                    <label class="radio-box">Locomotor impairment
+                                        <input type="radio" name="disability_type" id="disability-loco-imp" value="Locomotor impairment">
+                                        <span class="radio-square disabled" id="disability-loco-imp-check"></span>
+                                    </label>
+                                    <label class="radio-box">Visual impairment
+                                        <input type="radio" name="disability_type" id="disability-vis-imp" value="Visual impairment">
+                                        <span class="radio-square disabled" id="disability-vis-imp-check"></span>
+                                    </label>
+                                    <label class="radio-box">Reading disability
+                                        <input type="radio" name="disability_type" id="disability-reading" value="Reading disability">
+                                        <span class="radio-square disabled" id="disability-reading-check"></span>
+                                    </label>
+                                    <label class="radio-box">Others
+                                        <input type="radio" name="disability_type" id="disability-others" value="Others">
+                                        <span class="radio-square disabled" id="disability-others-check"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <div class="input-box">
+                                    <label for="disability-others" class="text">15.2 Others types of disability <span class="required">*</span></label>
+                                </div>
+                                <div class="input-box">
+                                    <input type="text" name="disability_others" id="disability-others-text" placeholder="Types of disability">
+                                    <i class="fas fa-wheelchair"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="wrapper">
+                    <div class="container">
+                        <div class="input-container">
+                            <div class="input-group right">
+                                <div class="button-box">
+                                    <button type="reset" class="button"><i class="fas fa-sync-alt"></i> Reset form</button>
+                                </div>
+                            </div>
+                            <div class="input-group left">
+                                <div class="button-box">
+                                    <button type="submit" class="button"><i class="fas fa-save"></i> Submit form</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </form>
+        </section>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/air-datepicker/2.2.3/js/datepicker.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/air-datepicker/2.2.3/js/i18n/datepicker.en.min.js"></script>
+        <script src="js/script.js"></script>
+    </body>
+</html>
