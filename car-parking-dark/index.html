@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="theme-color" content="#181818">
+        <title>Parking Management</title>
+        <link rel="stylesheet" href="css/fa/css/fontawesome.min.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <header>
+            <div class="content">
+                <h1><i class="fa-regular fa-parking"></i>Parking Lot Management</h1>
+            </div>
+        </header>
+        <section>
+            <div class="container">
+                <div class="content">
+                    <h2><i class="fa-regular fa-car"></i>Add vehicle to parking lot</h2>
+                    <form name="" action="#" method="POST" enctype="multipart/form-data" autocomplete="on">
+                        <div class="input-group">
+                            <div class="input-box">
+                                <input type="text" name="owner_name" id="txtOwnerName" placeholder="Owner name">
+                                <i class="fa-regular fa-user prepend"></i>
+                            </div>
+                            <div class="input-box">
+                                <input type="tel" name="owner_mobile" id="txtOwnerMobile" placeholder="Mobile no">
+                                <i class="fa-regular fa-phone prepend"></i>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <div class="input-box">
+                                <input type="text" name="vehicle_brand" id="txtBrand" placeholder="Brand">
+                                <i class="fa-regular fa-car prepend"></i>
+                            </div>
+                            <div class="input-box">
+                                <input type="text" name="vehicle_model" id="txtModel" placeholder="Model">
+                                <i class="fa-regular fa-car-alt prepend"></i>
+                            </div>
+                            <div class="input-box">
+                                <input type="text" name="vehicle_reg_no" id="txtRegNo" placeholder="Registered no">
+                                <i class="fa-regular fa-credit-card-front prepend"></i>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <div class="input-box">
+                                <input type="datetime-local" name="entry_date_time" id="txtEntryDT">
+                                <i class="fa-regular fa-arrow-right-to-bracket prepend"></i>
+                            </div>
+                            <div class="input-box">
+                                <input type="datetime-local" name="exit_date_time" id="txtExitDT">
+                                <i class="fa-regular fa-arrow-right-from-bracket prepend"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="input-group">
+                            <div class="input-box">
+                                <button class="btn btn-bg" id="btnAddVehicle"><i class="fa-regular fa-car-garage"></i>Add Vehicle</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container" style="padding-top: 0;">
+                <div class="content">
+                    <h2><i class="fa-regular fa-list-alt"></i>List of vehicles in the parking lot</h2>
+                    <form name="" action="#" method="POST" enctype="multipart/form-data" autocomplete="on">
+                        <div class="input-group">
+                            <div class="input-box">
+                                <input type="text" name="" id="txtSearch" placeholder="Search Anything....." required>
+                                <i class="fa-regular fa-search prepend"></i>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="table-container">
+                        <table id="vehicleList">
+                            <thead>
+                                <tr>
+                                    <th><i class="fa-regular fa-user"></i>Owner Name</th>
+                                    <th><i class="fa-regular fa-phone"></i>Mobile No</th>
+                                    <th><i class="fa-regular fa-car"></i>Brand</th>
+                                    <th><i class="fa-regular fa-car-alt"></i>Model</th>
+                                    <th><i class="fa-regular fa-credit-card-front"></i>Registered No</th>
+                                    <th><i class="fa-regular fa-arrow-right-to-bracket"></i>Entry Date-Time</th>
+                                    <th><i class="fa-regular fa-arrow-right-from-bracket"></i>Exit Date-Time</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Shekhar chandra</td>
+                                    <td>9122087872</td>
+                                    <td>Toyata</td>
+                                    <td>glanza</td>
+                                    <td>br30ca7541</td>
+                                    <td>2021-08-03T12:54</td>
+                                    <td>2021-08-03T17:58</td>
+                                    <td>
+                                        <button class="edit"><i class="fa-regular fa-pen"></i></button>
+                                        <button class="delete"><i class="fa-regular fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>sachin raj sharma</td>
+                                    <td>6206310282</td>
+                                    <td>honda</td>
+                                    <td>amaze</td>
+                                    <td>br30a3351</td>
+                                    <td>2021-08-01T13:00</td>
+                                    <td>2021-08-03T14:56</td>
+                                    <td>
+                                        <button class="edit"><i class="fa-regular fa-pen"></i></button>
+                                        <button class="delete"><i class="fa-regular fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Ashutosh mandal</td>
+                                    <td>7992438570</td>
+                                    <td>hyundai</td>
+                                    <td>I20</td>
+                                    <td>br32cb4352</td>
+                                    <td>2021-08-02T15:14</td>
+                                    <td>2021-08-04T11:12</td>
+                                    <td>
+                                        <button class="edit"><i class="fa-regular fa-pen"></i></button>
+                                        <button class="delete"><i class="fa-regular fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Nilesh kolape</td>
+                                    <td>7666784866</td>
+                                    <td>Maruti Suzuki</td>
+                                    <td>WagonR</td>
+                                    <td>br30ma5371</td>
+                                    <td>2021-08-03T13:15</td>
+                                    <td>2021-08-04T04:15</td>
+                                    <td>
+                                        <button class="edit"><i class="fa-regular fa-pen"></i></button>
+                                        <button class="delete"><i class="fa-regular fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Aditya chaturvedi</td>
+                                    <td>8700694222</td>
+                                    <td>Hyundai</td>
+                                    <td>i20 prime</td>
+                                    <td>br06pa6742</td>
+                                    <td>2021-08-02T12:15</td>
+                                    <td>2021-08-03T16:18</td>
+                                    <td>
+                                        <button class="edit"><i class="fa-regular fa-pen"></i></button>
+                                        <button class="delete"><i class="fa-regular fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Brajesh kumar</td>
+                                    <td>8271397938</td>
+                                    <td>tata</td>
+                                    <td>nano</td>
+                                    <td>br12aj3772</td>
+                                    <td>2021-08-02T13:20</td>
+                                    <td>2021-08-03T16:16</td>
+                                    <td>
+                                        <button class="edit"><i class="fa-regular fa-pen"></i></button>
+                                        <button class="delete"><i class="fa-regular fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="8" style="text-align: left;">Total vehicle(s) = 6</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script src="js/jquery.min.js"></script>
+        <script src="js/script.js"></script>
+    </body>
+</html>
