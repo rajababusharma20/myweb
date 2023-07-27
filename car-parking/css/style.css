@@ -13,14 +13,14 @@
     letter-spacing: 0.3px;
     scroll-behavior: smooth;
 }
-::-webkit-scrollbar{
+/* ::-webkit-scrollbar{
     width: 8px;
     background: rgba(0, 0, 0, 0.2);
 }
 ::-webkit-scrollbar-thumb{
     width: 8px;
-    background: #29c3cb;
-}
+    background: #045d62;
+} */
 
 body {
     font-family: 'Montserrat', sans-serif;
@@ -33,7 +33,7 @@ header {
     z-index: 5;
     width: 100%;
     padding: 20px 100px;
-    background: #29c3cb;
+    background: #045d62;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -69,7 +69,7 @@ h2 {
 }
 h2 i {
     margin-right: 10px;
-    color: #29C3CB;
+    color: #045d62;
 }
 
 form {
@@ -108,8 +108,8 @@ form {
 } 
 .input-box input:focus,
 .input-box textarea:focus {
-    border: 1px solid #29C3CB;
-    box-shadow: 0 0 0 4px rgb(42, 195, 203,0.3);
+    border: 1px solid #045d62;
+    box-shadow: 0 0 0 4px rgba(4, 93, 98, 0.3);
 }
 .input-box input:focus.error,
 .input-box textarea:focus.error {
@@ -133,7 +133,7 @@ form {
     display: inline-block;
     border: none;
     border-radius: 5px;
-    padding: 8px 14px;
+    padding: 10px 14px;
     border: 1px solid rgba(0, 0, 0, 0.2);
     text-transform: uppercase;
     font-size: 14px;
@@ -144,33 +144,33 @@ form {
     margin-right: 8px;
 }
 .btn-bg {
-    background: #29C3CB;
+    background: #045d62;
     color: #fff;
 }
 .btn-outline {
-    border: 1px solid #29C3CB;
+    border: 1px solid #045d62;
     color: #555;
 }
 .btn-bg:hover {
-    box-shadow: 0 0 0 4px rgb(42, 195, 203,0.3);
+    box-shadow: 0 0 0 4px rgba(4, 93, 98, 0.3);
     color: #fff;
 }
 .btn-outline:hover {
-    box-shadow: 0 0 0 4px rgb(42, 195, 203,0.3);
+    box-shadow: 0 0 0 4px rgba(4, 93, 98, 0.3);
 }
 
 
 .table-container {
     width: 100%;
     margin-top: 20px;
-    max-height: 320px;
+    max-height: 480px;
     overflow: auto;
 }
 table {
     position: relative;
     width: 100%;
     border-collapse: collapse;
-    min-width: 1080px;
+    min-width: 1120px;
     text-align: left;
     text-transform: uppercase;
     font-size: 14px;
@@ -194,11 +194,11 @@ table tr:nth-child(even) {
 }
 table tr th {
     padding: 10px;
-    background: #29C3CB;
-    color: #fff
+    background: #045d62;
+    color: #fff;
 }
 table tr th i {
-    margin-right: 8px;
+    margin-right: 10px;
 }
 table tr td {
     padding: 8px 10px;
@@ -210,16 +210,18 @@ table tr td:last-child {
 table tr td button {
     padding: 4px 5px;
     cursor: pointer;
-    color: #fff;
+    /* color: #fff; */
     border: none;
     outline: none;
     border-radius: 4px;
 }
 table tr td button.edit {
-    background: limegreen;
+    background: rgba(4, 145, 4, 0.2);
+    color: #049104;
 }
 table tr td button.delete {
-    background: red;
+    background: rgba(212, 7, 7, 0.2);
+    color: #d40707;
 }
 
 
