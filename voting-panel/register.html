@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Register | Online Voting System</title>
+        <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/css/all.css">
+    </head>
+    <body>
+        
+        <header>
+            <div class="project-title">
+                <h1><i class="fas fa-desktop"></i> Online Voting System <i class="fas fa-hand-pointer"></i></h1>
+            </div>
+            <div class="navbar">
+                <ul>
+                    <li><a href="index.html">Dashboard</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="#" class="active">Register</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <section>
+
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col">
+
+                        <form action="#" method="post" enctype="multipart/form-data" autocomplete="on">
+                            <div class="form-container full">
+
+                                <center>
+                                    <div class="icon">
+                                        <i class="fas fa-user-edit"></i>
+                                    </div>
+                                    <div class="heading">
+                                        <h1>Registration Form</h1>
+                                    </div>
+                                    <div class="desc">
+                                        <p>Please fill the form carefully. All ( * ) fields are required.</p>
+                                    </div>
+                                </center>
+
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <input type="text" name="name" id="name" placeholder="Name *">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <div class="input-group">
+                                        <input type="tel" name="mobile" id="mobile" maxlength="10" placeholder="Mobile No *">
+                                        <i class="fas fa-phone"></i>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <input type="text" name="state" id="state" placeholder="State *">
+                                        <i class="fas fa-map-marked"></i>
+                                    </div>
+                                    <div class="input-group">
+                                        <input type="text" name="city" id="city" placeholder="City *">
+                                        <i class="fas fa-city"></i>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <input type="password" name="passowrd" id="password" placeholder="Password *">
+                                        <i class="fas fa-lock"></i>
+                                    </div>
+                                    <div class="input-group">
+                                        <input type="password" name="confirm_passowrd" id="confirm-password" placeholder="Confirm Password *">
+                                        <i class="fas fa-lock"></i>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <input type="date" name="dob" id="dob">
+                                        <i class="fas fa-birthday-cake"></i>
+                                    </div>
+                                    <div class="input-group">
+                                        <input type="text" name="address" id="address" placeholder="Address *">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <div class="select-wrap">
+                                            <select name="register_type" id="register-type">
+                                                <option value="Voter">Voter</option>
+                                                <option value="Candidate">Candidate</option>
+                                            </select>
+                                            <i class="fas fa-hand-pointer"></i>
+                                        </div>
+                                    </div>
+                                    <div class="input-group">
+                                        <input type="file" name="photo" id="photo">
+                                        <i class="fas fa-image"></i>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <button type="submit" id="btnRegister">REGISTER NOW</button>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <p style="text-align: center;">Alreadey Registered ? <a href="login.html">Login here</a></p>
+                                </div>
+
+                            </div>
+                        </form>
+                        
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <footer>
+            <p>Designed By : <a href="voting-panel.html">Shekhar</a></p>
+        </footer>
+
+
+        <script src="js/jquery.min.js"></script>
+        <script src="js/script.js"></script>
+    </body>
+</html>
