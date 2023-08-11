@@ -100,6 +100,7 @@ form {
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
 }
+input[type="datetime-local"]::-webkit-inner-spin-button,
 input[type="datetime-local"]::-webkit-calendar-picker-indicator {
     opacity: 0;
 }
