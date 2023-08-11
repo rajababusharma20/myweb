@@ -4,9 +4,10 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="theme-color" content="#29C3CB">
+        <meta name="theme-color" content="#181818">
         <title>Parking Management</title>
         <link rel="stylesheet" href="css/fa/css/fontawesome.min.css">
+        <!-- <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.2/css/all.css"> -->
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
@@ -19,45 +20,82 @@
             <div class="container">
                 <div class="content">
                     <h2><i class="fa-regular fa-car"></i>Add vehicle to parking lot</h2>
+                    <p>All fields are required...</p>
                     <form name="" action="#" method="POST" enctype="multipart/form-data" autocomplete="on">
                         <div class="input-group">
                             <div class="input-box">
-                                <input type="text" name="owner_name" id="txtOwnerName" placeholder="Owner name">
-                                <i class="fa-regular fa-user prepend"></i>
+                                <i class="fa-regular fa-user icon-left"></i>
+                                <input type="text" name="owner_name" id="owner-name" placeholder="Owner name">
                             </div>
                             <div class="input-box">
-                                <input type="tel" name="owner_mobile" id="txtOwnerMobile" placeholder="Mobile no">
-                                <i class="fa-regular fa-phone prepend"></i>
+                                <i class="fa-regular fa-phone icon-left"></i>
+                                <input type="tel" name="owner_mobile" id="owner-mobile" placeholder="Mobile no">
+                            </div>
+							<!-- <div class="input-box">
+                                <i class="fa-regular fa-envelope icon-left"></i>
+                                <input type="email" name="owner_email" id="OwnerEmail" placeholder="Email id">
+                            </div> -->
+                        </div>
+                        <div class="input-group">
+                            <div class="input-box">
+                                <i class="fa-regular fa-car icon-left"></i>
+                                <input type="text" name="vehicle_brand" id="vehicle-brand" placeholder="Vehicle brand">
+                            </div>
+                            <div class="input-box">
+                                <i class="fa-regular fa-car-alt icon-left"></i>
+                                <input type="text" name="vehicle_model" id="vehicle-model" placeholder="Vehicle model">
+                            </div>
+                            <div class="input-box">
+                                <i class="fa-regular fa-palette icon-left"></i>
+                                <input type="text" name="vehicle_color" id="vehicle-color" placeholder="Vehicle color">
+                            </div>
+                        </div>
+                        <div class="input-group">
+							<div class="input-box">
+                                <i class="fa-regular fa-credit-card-front icon-left"></i>
+                                <input type="text" name="vehicle_reg_no" id="vehicle-reg-no" placeholder="Registration no">
+                            </div>
+                            <div class="input-box">
+                                <i class="fa-regular fa-address-card icon-left"></i>
+                                <select name="registration_type" id="registration-type">
+                                    <!-- <option value="" selected disabled>Registration type</option> -->
+                                    <option value="Non transport">Non transport</option>
+                                    <option value="Transport">Transport</option>
+                                    <option value="Electric non transport">Electric non transport</option>
+                                    <option value="Electric transport">Electric transport</option>
+                                    <option value="Temporary registration">Temporary registration</option>
+                                    <option value="Trade certificate">Trade certificate</option>
+                                    <option value="Ministry of defence">Ministry of defence</option>
+                                    <option value="Rental">Rental</option>
+                                    <option value="Consulate / Diplomat">Consulate / Diplomat</option>
+                                    <option value="Governors of state">Governors of state</option>
+                                </select>
+                                <i class="fa-regular fa-sort icon-right"></i>
                             </div>
                         </div>
                         <div class="input-group">
                             <div class="input-box">
-                                <input type="text" name="vehicle_brand" id="txtBrand" placeholder="Brand">
-                                <i class="fa-regular fa-car prepend"></i>
+                                <i class="fa-regular fa-arrow-right-to-bracket icon-left"></i>
+                                <input type="datetime-local" name="entry_date_time" id="entry-date-time">
                             </div>
                             <div class="input-box">
-                                <input type="text" name="vehicle_model" id="txtModel" placeholder="Model">
-                                <i class="fa-regular fa-car-alt prepend"></i>
+                                <i class="fa-regular fa-code-compare icon-left"></i>
+                                <select name="current_status" id="current-status">
+                                    <!-- <option value="" selected>Current status</option> -->
+                                    <option value="Parked in">Parked in</option>
+                                    <option value="Parked out">Parked out</option>
+                                </select>
+                                <i class="fa-regular fa-sort icon-right"></i>
                             </div>
                             <div class="input-box">
-                                <input type="text" name="vehicle_reg_no" id="txtRegNo" placeholder="Registered no">
-                                <i class="fa-regular fa-credit-card-front prepend"></i>
-                            </div>
-                        </div>
-                        <div class="input-group">
-                            <div class="input-box">
-                                <input type="datetime-local" name="entry_date_time" id="txtEntryDT">
-                                <i class="fa-regular fa-arrow-right-to-bracket prepend"></i>
-                            </div>
-                            <div class="input-box">
-                                <input type="datetime-local" name="exit_date_time" id="txtExitDT">
-                                <i class="fa-regular fa-arrow-right-from-bracket prepend"></i>
+                                <i class="fa-regular fa-arrow-right-from-bracket icon-left"></i>
+                                <input type="datetime-local" name="exit_date_time" id="exit-date-time">
                             </div>
                         </div>
                         
                         <div class="input-group">
                             <div class="input-box">
-                                <button class="btn btn-bg" id="btnAddVehicle"><i class="fa-regular fa-car-garage"></i>Add Vehicle</button>
+                                <button class="btn" id="btnAddVehicle"><i class="fa-regular fa-car-garage"></i>Add Vehicle</button>
                             </div>
                         </div>
                     </form>
@@ -68,11 +106,12 @@
             <div class="container" style="padding-top: 0;">
                 <div class="content">
                     <h2><i class="fa-regular fa-list-alt"></i>List of vehicles in the parking lot</h2>
+                    <p>You can search data by Owner name, Mobile no, Brand, Model, Color, Regd. no, Regd. type, Current status, Entry & Exit date and time.</p>
                     <form name="" action="#" method="POST" enctype="multipart/form-data" autocomplete="on">
                         <div class="input-group">
                             <div class="input-box">
-                                <input type="text" name="" id="txtSearch" placeholder="Search Anything....." required>
-                                <i class="fa-regular fa-search prepend"></i>
+                                <i class="fa-regular fa-search icon-left"></i>
+                                <input type="text" name="search" id="search" placeholder="Search Anything....." required>
                             </div>
                         </div>
                     </form>
@@ -81,12 +120,15 @@
                             <thead>
                                 <tr>
                                     <th><i class="fa-regular fa-user"></i>Owner Name</th>
-                                    <th><i class="fa-regular fa-phone"></i>Mobile No</th>
+                                    <th><i class="fa-regular fa-phone"></i>Mob No</th>
                                     <th><i class="fa-regular fa-car"></i>Brand</th>
                                     <th><i class="fa-regular fa-car-alt"></i>Model</th>
-                                    <th><i class="fa-regular fa-credit-card-front"></i>Registered No</th>
-                                    <th><i class="fa-regular fa-arrow-right-to-bracket"></i>Entry Date-Time</th>
-                                    <th><i class="fa-regular fa-arrow-right-from-bracket"></i>Exit Date-Time</th>
+                                    <th><i class="fa-regular fa-palette"></i>Color</th>
+									<th><i class="fa-regular fa-credit-card-front"></i>Regd No</th>
+									<th><i class="fa-regular fa-address-card"></i>Regd type</th>
+                                    <th><i class="fa-regular fa-arrow-right-to-bracket"></i>Entry D & T</th>
+                                    <th><i class="fa-regular fa-code-compare"></i>Status</th>
+                                    <th><i class="fa-regular fa-arrow-right-from-bracket"></i>Exit D & T</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
@@ -96,12 +138,15 @@
                                     <td>9122087872</td>
                                     <td>Toyata</td>
                                     <td>glanza</td>
-                                    <td>br30ca7541</td>
+                                    <td>Black</td>
+									<td>br30ca7541</td>
+                                    <td>Non transport</td>
                                     <td>2021-08-03T12:54</td>
-                                    <td>2021-08-03T17:58</td>
+                                    <td class="parked-in">Parked in</td>
+                                    <td></td>
                                     <td>
-                                        <button class="edit"><i class="fa-regular fa-pen"></i></button>
-                                        <button class="delete"><i class="fa-regular fa-trash"></i></button>
+                                        <button class="edit"><i class="fa-regular fa-pen fa-fw"></i></button>
+                                        <button class="delete"><i class="fa-regular fa-trash fa-fw"></i></button>
                                     </td>
                                 </tr>
                                 <tr>
@@ -109,12 +154,15 @@
                                     <td>6206310282</td>
                                     <td>honda</td>
                                     <td>amaze</td>
-                                    <td>br30a3351</td>
+                                    <td>White</td>
+									<td>br30a3351</td>
+                                    <td>Governors of state</td>
                                     <td>2021-08-01T13:00</td>
+                                    <td class="parked-out">Parked out</td>
                                     <td>2021-08-03T14:56</td>
                                     <td>
-                                        <button class="edit"><i class="fa-regular fa-pen"></i></button>
-                                        <button class="delete"><i class="fa-regular fa-trash"></i></button>
+                                        <button class="edit"><i class="fa-regular fa-pen fa-fw"></i></button>
+                                        <button class="delete"><i class="fa-regular fa-trash fa-fw"></i></button>
                                     </td>
                                 </tr>
                                 <tr>
@@ -122,12 +170,15 @@
                                     <td>7992438570</td>
                                     <td>hyundai</td>
                                     <td>I20</td>
-                                    <td>br32cb4352</td>
+                                    <td>Red</td>
+									<td>br32cb4352</td>
+                                    <td>Ministry of defence</td>
                                     <td>2021-08-02T15:14</td>
-                                    <td>2021-08-04T11:12</td>
+                                    <td class="parked-in">Parked in</td>
+                                    <td></td>
                                     <td>
-                                        <button class="edit"><i class="fa-regular fa-pen"></i></button>
-                                        <button class="delete"><i class="fa-regular fa-trash"></i></button>
+                                        <button class="edit"><i class="fa-regular fa-pen fa-fw"></i></button>
+                                        <button class="delete"><i class="fa-regular fa-trash fa-fw"></i></button>
                                     </td>
                                 </tr>
                                 <tr>
@@ -135,12 +186,15 @@
                                     <td>7666784866</td>
                                     <td>Maruti Suzuki</td>
                                     <td>WagonR</td>
-                                    <td>br30ma5371</td>
+                                    <td>Purple</td>
+									<td>br30ma5371</td>
+                                    <td>Electric transport</td>
                                     <td>2021-08-03T13:15</td>
+                                    <td class="parked-out">Parked out</td>
                                     <td>2021-08-04T04:15</td>
                                     <td>
-                                        <button class="edit"><i class="fa-regular fa-pen"></i></button>
-                                        <button class="delete"><i class="fa-regular fa-trash"></i></button>
+                                        <button class="edit"><i class="fa-regular fa-pen fa-fw"></i></button>
+                                        <button class="delete"><i class="fa-regular fa-trash fa-fw"></i></button>
                                     </td>
                                 </tr>
                                 <tr>
@@ -148,12 +202,15 @@
                                     <td>8700694222</td>
                                     <td>Hyundai</td>
                                     <td>i20 prime</td>
-                                    <td>br06pa6742</td>
+                                    <td>Orange</td>
+									<td>br06pa6742</td>
+                                    <td>Temporary registration</td>
                                     <td>2021-08-02T12:15</td>
-                                    <td>2021-08-03T16:18</td>
+                                    <td class="parked-in">Parked in</td>
+                                    <td></td>
                                     <td>
-                                        <button class="edit"><i class="fa-regular fa-pen"></i></button>
-                                        <button class="delete"><i class="fa-regular fa-trash"></i></button>
+                                        <button class="edit"><i class="fa-regular fa-pen fa-fw"></i></button>
+                                        <button class="delete"><i class="fa-regular fa-trash fa-fw"></i></button>
                                     </td>
                                 </tr>
                                 <tr>
@@ -161,18 +218,21 @@
                                     <td>8271397938</td>
                                     <td>tata</td>
                                     <td>nano</td>
-                                    <td>br12aj3772</td>
+                                    <td>Yellow</td>
+									<td>br12aj3772</td>
+                                    <td>Consulate / Diplomat</td>
                                     <td>2021-08-02T13:20</td>
+                                    <td class="parked-out">Parked out</td>
                                     <td>2021-08-03T16:16</td>
                                     <td>
-                                        <button class="edit"><i class="fa-regular fa-pen"></i></button>
-                                        <button class="delete"><i class="fa-regular fa-trash"></i></button>
+                                        <button class="edit"><i class="fa-regular fa-pen fa-fw"></i></button>
+                                        <button class="delete"><i class="fa-regular fa-trash fa-fw"></i></button>
                                     </td>
                                 </tr>
                             </tbody>
                             <tfoot>
                                 <tr>
-                                    <td colspan="8" style="text-align: left;">Total vehicle(s) = 6</td>
+                                    <td colspan="10" style="text-align: left;">Total vehicle(s) = 6</td>
                                 </tr>
                             </tfoot>
                         </table>
