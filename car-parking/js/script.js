@@ -8,9 +8,9 @@ $(document).ready(function () {
         var txtVehicleModel = $('#vehicle-model');
         var txtVehicleColor = $('#vehicle-color');
         var txtVehicleRegNo = $('#vehicle-reg-no');
-        var sltRegistrationType = $('#registration-type');
+        // var sltRegistrationType = $('#registration-type');
         var dtEntryDateTime = $('#entry-date-time');
-        var sltCurrentStatus = $('#current-status');
+        // var sltCurrentStatus = $('#current-status');
         var dtExitDateTime = $('#exit-date-time');
 
 
