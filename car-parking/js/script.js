@@ -2,13 +2,16 @@ $(document).ready(function () {
 
     $('#btnAddVehicle').click(function () { 
         
-        var txtOwnerName = $('#txtOwnerName');
-        var txtOwnerMobile = $('#txtOwnerMobile');
-        var txtBrand = $('#txtBrand');
-        var txtModel = $('#txtModel');
-        var txtRegNo = $('#txtRegNo');
-        var txtEntryDT = $('#txtEntryDT');
-        var txtExitDT = $('#txtExitDT');
+        var txtOwnerName = $('#owner-name');
+        var txtOwnerMobile = $('#owner-mobile');
+        var txtVehicleBrand = $('#vehicle-brand');
+        var txtVehicleModel = $('#vehicle-model');
+        var txtVehicleColor = $('#vehicle-color');
+        var txtVehicleRegNo = $('#vehicle-reg-no');
+        var sltRegistrationType = $('#registration-type');
+        var dtEntryDateTime = $('#entry-date-time');
+        var sltCurrentStatus = $('#current-status');
+        var dtExitDateTime = $('#exit-date-time');
 
 
         if (txtOwnerName.val() == "") {
@@ -21,8 +24,6 @@ $(document).ready(function () {
             txtOwnerName.removeClass('error');
         }
 
-
-
         if (txtOwnerMobile.val() == "") {
             alert("Please enter owner mobile no.");
             txtOwnerMobile.addClass('error');
@@ -33,83 +34,71 @@ $(document).ready(function () {
             txtOwnerMobile.removeClass('error');
         }
 
-
-
-        if (txtOwnerMobile.val().length < 10) {
-            alert("Mobile no must be 10 digits long.");
-            txtOwnerMobile.addClass('error');
-            txtOwnerMobile.focus();
-            return false;
-        }
-        else {
-            txtOwnerMobile.removeClass('error');
-        }
-
-
-
-        if (txtBrand.val() == "") {
+        if (txtVehicleBrand.val() == "") {
             alert("Please enter vehicle brand.");
-            txtBrand.addClass('error');
-            txtBrand.focus();
+            txtVehicleBrand.addClass('error');
+            txtVehicleBrand.focus();
             return false;
         }
         else {
-            txtBrand.removeClass('error');
+            txtVehicleBrand.removeClass('error');
         }
 
-
-
-        if (txtModel.val() == "") {
+        if (txtVehicleModel.val() == "") {
             alert("Please enter vehicle model.");
-            txtModel.addClass('error');
-            txtModel.focus();
+            txtVehicleModel.addClass('error');
+            txtVehicleModel.focus();
             return false;
         }
         else {
-            txtModel.removeClass('error');
+            txtVehicleModel.removeClass('error');
         }
 
+        if (txtVehicleColor.val() == "") {
+            alert("Please enter vehicle color.");
+            txtVehicleColor.addClass('error');
+            txtVehicleColor.focus();
+            return false;
+        }
+        else {
+            txtVehicleColor.removeClass('error');
+        }
 
-
-        if (txtRegNo.val() == "") {
+        if (txtVehicleRegNo.val() == "") {
             alert("Please enter vehicle registered no.");
-            txtRegNo.addClass('error');
-            txtRegNo.focus();
+            txtVehicleRegNo.addClass('error');
+            txtVehicleRegNo.focus();
             return false;
         }
         else {
-            txtRegNo.removeClass('error');
+            txtVehicleRegNo.removeClass('error');
         }
 
-
-
-        if (txtEntryDT.val() == "") {
+        if (dtEntryDateTime.val() == "") {
             alert("Please enter vehicle entry date-time.");
-            txtEntryDT.addClass('error');
-            txtEntryDT.focus();
+            dtEntryDateTime.addClass('error');
+            dtEntryDateTime.focus();
             return false;
         }
         else {
-            txtEntryDT.removeClass('error');
+            dtEntryDateTime.removeClass('error');
         }
 
-
-
-        if (txtExitDT.val() == "") {
+        if (dtExitDateTime.val() == "") {
             alert("Please enter vehicle exit date-time.");
-            txtExitDT.addClass('error');
-            txtExitDT.focus();
+            dtExitDateTime.addClass('error');
+            dtExitDateTime.focus();
             return false;
         }
         else {
-            txtExitDT.removeClass('error');
+            dtExitDateTime.removeClass('error');
         }
 
     });
 
 
     
-    $('#txtSearch').on("keyup", function () { 
+    $('#search').on("keyup", function () { 
         
         var value = $(this).val().toLowerCase();
 
