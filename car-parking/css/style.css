@@ -225,16 +225,15 @@ table tr td span {
     padding: 4px 8px ;
     border-radius: 4px;
     /* font-size: 12px; */
+    font-weight: bold;
 }
 table tr td span.parked-in {
     background: rgba(4, 145, 4, 0.2);
     color: #049104;
-    font-weight: bold;
 }
 table tr td span.parked-out {
     background: rgba(212, 7, 7, 0.2);
     color: #d40707;
-    font-weight: bold;
 }
 
 table tr td button {
