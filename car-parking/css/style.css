@@ -103,6 +103,8 @@ form {
 input[type="datetime-local"]::-webkit-inner-spin-button,
 input[type="datetime-local"]::-webkit-calendar-picker-indicator {
     -webkit-appearance: none;
+    background: transparent;
+    color: transparent;
     opacity: 0;
 }
 .input-box select {
