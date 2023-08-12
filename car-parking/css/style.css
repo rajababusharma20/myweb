@@ -223,8 +223,8 @@ table tr td:last-child {
 }
 
 table tr td span {
-    padding: 4px 8px ;
-    border-radius: 4px;
+    padding: 3px 6px ;
+    border-radius: 5px;
     /* font-size: 12px; */
     font-weight: bold;
 }
@@ -240,7 +240,7 @@ table tr td span.parked-out {
 }
 
 table tr td button {
-    padding: 4px;
+    padding: 5px;
     cursor: pointer;
     color: #fff;
     border: none;
