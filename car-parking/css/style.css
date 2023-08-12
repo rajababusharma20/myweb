@@ -230,10 +230,12 @@ table tr td span {
 table tr td span.parked-in {
     background: rgba(4, 145, 4, 0.2);
     color: #049104;
+    border: 1px solid #049104;
 }
 table tr td span.parked-out {
     background: rgba(212, 7, 7, 0.2);
     color: #d40707;
+    border: 1px solid #d40707;
 }
 
 table tr td button {
