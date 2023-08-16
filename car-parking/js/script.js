@@ -1,5 +1,17 @@
 $(document).ready(function () {
 
+
+
+    $('#showAddVehicle').click(function () {
+        $('#form-modal').addClass('active');
+        $('body').css("overflow", "hidden");
+        
+    });
+    $('#closeAddVehicle').click(function () {
+        $('#form-modal').removeClass('active');
+        $('body').css("overflow", "auto");
+    });
+
     $('#btnAddVehicle').click(function () { 
         
         var txtOwnerName = $('#owner-name');
